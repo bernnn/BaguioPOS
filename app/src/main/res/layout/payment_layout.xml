@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/colorLightGrey"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:clickable="true"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:text="Back"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:text="Payment"/>
+
+
+
+        <TextView
+            android:id="@+id/btnValidate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorLightGrey"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:onClick="onClick"
+            android:clickable="true"
+            android:gravity="center"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:text="Validat "/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:weightSum="100">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:weightSum="100">
+
+
+            <TextView
+                android:id="@+id/tvCash"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="25"
+                android:background="@color/colorLightGrey"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:clickable="true"
+                android:text="Cash(USD)"
+                android:textSize="40sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                android:orientation="vertical">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/inputAmountWrapper"
+                    android:layout_width="match_parent"
+                    android:background="#fff"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/labelWrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="25"
+                            android:textAppearance="@android:style/TextAppearance.Large"
+                            android:padding="10dp"
+                            android:text="Due"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="25"
+                            android:textAppearance="@android:style/TextAppearance.Large"
+                            android:padding="10dp"
+                            android:text="Tendered"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="25"
+                            android:textAppearance="@android:style/TextAppearance.Large"
+                            android:padding="10dp"
+                            android:text="Change"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="25"
+                            android:textAppearance="@android:style/TextAppearance.Large"
+                            android:padding="10dp"
+                            android:text="Method"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_below="@+id/labelWrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/colorPrimary"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:id="@+id/tvDue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="25"
+                            android:textAppearance="@android:style/TextAppearance.Large"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:hint="1,234.56"/>
+
+                        <TextView
+                            android:id="@+id/tvTendered"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="25"
+                            android:textAppearance="@android:style/TextAppearance.Large"
+                            android:background="#fff"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:hint="0.00"/>
+
+                        <TextView
+                            android:id="@+id/tvChange"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="25"
+                            android:textAppearance="@android:style/TextAppearance.Large"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:hint="0.00"/>
+
+                        <TextView
+                            android:id="@+id/tvMethod"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="25"
+                            android:textAppearance="@android:style/TextAppearance.Large"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:hint="Cash(USD)"/>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/amountWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff">
+
+                    <TextView
+                        android:id="@+id/tvTotalAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="40sp"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:hint="$1,234.56"/>
+
+                    <TextView
+                        android:id="@+id/tvLabel"
+                        android:layout_below="@+id/tvTotalAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Please select a payment method"/>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="60"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/keyboard_layout"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

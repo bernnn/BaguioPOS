@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/quantityWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:background="#fff"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:textSize="50sp"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:hint="0"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dineInWrapper"
+        android:visibility="gone"
+        android:layout_below="@+id/quantityWrapper"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/rgOrderType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/radioDineIn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Dine In"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioTogo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="To Go" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layoutKeyboard"
+        layout="@layout/keyboard_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dineInWrapper"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp" />
+
+
+</RelativeLayout>

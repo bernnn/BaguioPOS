@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "139307117446",
+    "firebase_url": "https://baguiopos-9a942.firebaseio.com",
+    "project_id": "baguiopos-9a942",
+    "storage_bucket": "baguiopos-9a942.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139307117446:android:bb2f89673f222413",
+        "android_client_info": {
+          "package_name": "com.sideline.baguiopos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139307117446-k0rbtn78v6hl07uc9m70nb85qb0an8gh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sideline.baguiopos",
+            "certificate_hash": "c216b2dac27a231c363a96e5ff172eccb30eff3e"
+          }
+        },
+        {
+          "client_id": "139307117446-7r6c9tglp0ictufh5frscgf7d2omv6n5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcBuXSRlbznFoFDifao4wgL3p8gIifge4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139307117446-7r6c9tglp0ictufh5frscgf7d2omv6n5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

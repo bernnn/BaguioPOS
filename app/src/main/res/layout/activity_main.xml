@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.Dashboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+       <include layout="@layout/toolbar"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40"
+                    android:orientation="vertical"
+                    android:weightSum="100">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="8"
+                        android:padding="15dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tvCompanyName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:hint="Cashier"/>
+
+                        <TextView
+                            android:id="@+id/tvStaffName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:hint="STAFF NAME"/>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="92"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <include layout="@layout/order_list_layout"/>
+
+                            <!--<FrameLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:layout_margin="10dp"-->
+                                <!--android:id="@+id/orderFragment"/>-->
+
+                            <!--<include layout="@layout/order_list_layout"/>-->
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="0dp"-->
+                        <!--android:layout_weight="50"-->
+                        <!--android:weightSum="100"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_weight="30">-->
+
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_weight="70">-->
+
+                            <!--<include layout="@layout/keyboard_layout"/>-->
+
+                        <!--</LinearLayout>-->
+
+                    <!--</LinearLayout>-->
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="80"
+                        android:layout_above="@+id/tvViewOrder"
+                        android:orientation="vertical">
+
+                        <!--<FrameLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:orientation="vertical">-->
+
+                            <com.sideline.baguiopos.util.DynamicTab
+                                android:id="@+id/tabs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:elevation="6dp"
+                                app:tabGravity="fill"
+                                android:foregroundGravity="center"
+                                app:tabIndicatorColor="#47AFE2"
+                                app:tabMode="scrollable"
+                                app:tabSelectedTextColor="#47AFE2"
+                                android:layout_gravity="center_horizontal"
+                                app:tabTextColor="#000"
+                                app:tabMinWidth="0dp"/>
+
+                            <android.support.v4.view.ViewPager
+                            android:id="@+id/viewpager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                        <!--</FrameLayout>-->
+
+
+
+
+                    </LinearLayout>
+
+
+                        <TextView
+                            android:layout_margin="15dp"
+                            android:id="@+id/tvViewOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                            android:gravity="center"
+                            android:onClick="onClick"
+                            android:clickable="true"
+                            android:textColor="#fff"
+                            android:padding="20dp"
+                            android:background="@color/btnBG"
+                            android:layout_alignParentBottom="true"
+                            android:text="VIEW ORDER"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>
